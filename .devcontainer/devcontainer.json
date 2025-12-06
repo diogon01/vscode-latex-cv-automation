@@ -1,0 +1,16 @@
+{
+  "name": "LaTeX UFSC DevContainer",
+  "image": "qmcgaw/latexdevcontainer",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "sh .devcontainer/setup.sh"
+}
