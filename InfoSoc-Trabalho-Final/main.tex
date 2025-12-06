@@ -1,0 +1,323 @@
+%https://github.com/SublimeText/LaTeXTools/issues/1439
+%!TEX output_directory=latexcache
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Modelo UFSC para Trabalhos Academicos (tese de doutorado, dissertação de
+% mestrado) utilizando a classe abntex2
+%
+% Autor: Alisson Lopes Furlani
+%   Modificações:
+%   - 27/08/2019: Alisson L. Furlani, add pacote 'glossaries' para listas
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+% https://tex.stackexchange.com/questions/516058/why-my-biblatex-language-is-not-changing-when-passing-the-language-on-my-documen
+% https://tex.stackexchange.com/questions/385895/how-to-make-passoptionstopackage-add-the-option-as-the-last
+% \PassOptionsToPackage{brazil,main=english,spanish,french}{babel}
+\PassOptionsToPackage{notocbasic}{nomencl}   
+\PassOptionsToPackage{main=brazil,english,spanish,french}{babel}
+
+\documentclass[
+% -- opções da classe memoir --
+12pt, % tamanho da fonte
+%openright, % capítulos começam em pág ímpar (insere página vazia caso preciso)
+oneside, % para impressão no anverso. Oposto a twoside
+a4paper, % tamanho do papel.
+% -- opções da classe abntex2 --
+chapter=TITLE, % títulos de capítulos convertidos em letras maiúsculas
+section=TITLE, % títulos de seções convertidos em letras maiúsculas
+%subsection=TITLE, % títulos de subseções convertidos em letras maiúsculas
+%subsubsection=TITLE, % títulos de subsubseções convertidos em letras maiúsculas
+% -- opções do pacote babel --
+english, % idioma adicional para hifenização
+%french, % idioma adicional para hifenização
+%spanish, % idioma adicional para hifenização
+brazil, % https://tex.stackexchange.com/questions/484400/changing-the-cleveref-package-language-conjunction-definition
+brazilian, % https://tex.stackexchange.com/questions/516058/why-isnt-my-biblatex-language-changing-when-passing-the-language-on-my-document
+]{setup/ufscthesisx}
+
+\addbibresource{aftertext/references.bib} % Seus arquivos de referências
+
+% https://tex.stackexchange.com/questions/516056/why-an-empty-or-not-biblatex-declaresourcemap-is-removing-my-bibliography-acces
+% https://github.com/abntex/biblatex-abnt/pull/56/files
+\DeclareStyleSourcemap{%% >>>2
+  % This maps some fields used in abntex2cite to biblatex fields.
+  \maps[datatype=bibtex]{%
+    \map{%
+      \step[fieldsource=conference-number,fieldtarget=number]%
+      \step[fieldsource=conference-year,fieldtarget=eventdate]%
+      \step[fieldsource=conference-location,fieldtarget=venue]%
+      \step[fieldsource=conference-number,fieldtarget=number]%
+      \step[fieldsource=org-short,fieldtarget=shortauthor]%
+      \step[fieldsource=urlaccessdate,fieldtarget=urldate]%
+      \step[fieldsource=year-presented,fieldtarget=eventyear]%
+      \step[fieldsource=furtherresp,fieldtarget=titleaddon]%
+      \step[typesource=journalpart,typetarget=supperiodical]%
+    }%
+    \map[overwrite=false]{%
+      \step[fieldsource=reprinted-from, final]%
+      \step[fieldset=related, origfieldval]%
+    }%
+    \map[overwrite=false]{%
+      \step[fieldsource=reprinted-text, final]%
+      \step[fieldset=relatedtype, fieldvalue={reprintfrom}]%
+    }%
+    \map{%
+      \pertype{patent}% Use the organization as sourcekey for patents
+      \step[fieldsource=organization, final]%
+      \step[fieldset=sortkey, origfieldval]%
+    }%
+    \map[overwrite=false]{%
+      \pertype{thesis}%
+      \pertype{phdthesis}%
+      \pertype{mastersthesis}%
+      \pertype{monography}%
+      \step[fieldset=bookpagination, fieldvalue={sheet}]%
+    }%
+    % remove fields that are always useless
+    \map{
+      \step[fieldset=abstract, null]
+      \step[fieldset=pagetotal, null]
+    }
+    % % remove URLs for types that are primarily printed
+    % \map{
+    %   \pernottype{software}
+    %   \pernottype{online}
+    %   \pernottype{report}
+    %   \pernottype{techreport}
+    %   \pernottype{standard}
+    %   \pernottype{manual}
+    %   \pernottype{misc}
+    %   \step[fieldset=url, null]
+    %   \step[fieldset=urldate, null]
+    % }
+    \map{
+      \pertype{inproceedings}
+      % remove mostly redundant conference information
+      \step[fieldset=venue, null]
+      \step[fieldset=eventdate, null]
+      \step[fieldset=eventtitle, null]
+      % do not show ISBN for proceedings
+      \step[fieldset=isbn, null]
+      % Citavi bug
+      \step[fieldset=volume, null]
+    }
+  }%
+}% <<<2
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\autor{Diogo Henrique Fragoso de Oliveira}
+
+\titulo{Paternidade no mercado de TI: conflitos de papéis entre provedor, cuidador e “profissional ideal” sob o machismo estrutural}
+% Caso não tenha subtítulo, mantenha comentado:
+% \subtitulo{Subtítulo (se houver)}
+
+% Professor da disciplina (usado aqui como orientador do trabalho)
+\orientador{Prof. Jose Eduardo de Lucca}
+% Caso tenha coorientador, descomente e preencha:
+% \coorientador{Prof. XXXXXX}
+
+% Coordenador do curso (ainda a definir, se quiser usar)
+\coordenador{Prof. XXXXXX}
+% Se for coordenadora mulher, comente a linha acima e use:
+% \coordenador[Coordenadora]{Nome da Coordenadora}
+
+% Ano de entrega do trabalho
+\ano{2025}
+% Data da entrega/entrega final (preencher depois com o dia certo)
+\data{[dia] de [mês] de 2025}
+% Cidade em que o trabalho é apresentado (preencher conforme teu campus)
+\local{[Cidade]}
+
+\instituicaosigla{UFSC}
+\instituicao{Universidade Federal de Santa Catarina}
+
+% Tipo de trabalho e nível (ajustado para disciplina de graduação)
+\tipotrabalho{Trabalho acadêmico de graduação}
+\formacao{Bacharel em Sistemas de Informação}
+\nivel{graduação}
+\programa{Curso de Sistemas de Informação}
+% Preencher com o centro/campus correto, por ex.: "Centro Tecnológico (CTC)"
+\centro{[Centro/Campus da UFSC]}
+
+% Dados específicos da disciplina (opcionais, use se forem chamados em outros pontos do modelo)
+\newcommand{\matriculaAluno}{16203891}
+\newcommand{\nomeCurso}{Sistemas de Informação}
+\newcommand{\disciplinaNome}{INE5621-06238 (20252) -- Informática e Sociedade}
+\newcommand{\docenteResponsavel}{Prof. Jose Eduardo de Lucca}
+
+% FIXME: Preencha com Campus XXXXXX     ou     Centro de XXXXXX
+\campus{Campus Reitor João David Ferreira Lima}
+\preambulo
+{%
+\imprimirtipotrabalho~submetida~ao~\imprimirprograma~da~\imprimirinstituicao~para~a~obtenção~do~título~de~\imprimirformacao.
+}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+% ---
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+% informações do PDF
+\makeatletter
+\hypersetup{
+  %pagebackref=true,
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={\imprimirpreambulo},
+  pdfcreator={LaTeX with abnTeX2},
+  pdfkeywords={ufsc, latex, abntex2},
+  colorlinks=true,            % false: boxed links; true: colored links
+  linkcolor=black,%blue,              % color of internal links
+  citecolor=black,%blue,              % color of links to bibliography
+  filecolor=black,%magenta,           % color of file links
+  urlcolor=black,%blue,
+  bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+% ---
+
+% Declaração das siglas
+\siglalista{ABNT}{Associação Brasileira de Normas Técnicas}
+
+% Declaração dos simbolos
+\simbololista{C}{\ensuremath{C}}{Circunferência de um círculo}
+\simbololista{pi}{\ensuremath{\pi}}{Número pi}
+\simbololista{r}{\ensuremath{r}}{Raio de um círculo}
+\simbololista{A}{\ensuremath{A}}{Área de um círculo}
+
+% compila a lista de abreviaturas e siglas e a lista de símbolos
+\makenoidxglossaries
+
+% ---
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% Espaçamento 1.5 entre linhas
+\OnehalfSpacing
+
+% Corrige justificação
+%\sloppy
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual %a macro \pretextual é acionado automaticamente no início de \begin{document}
+% ---
+% Capa, folha de rosto, ficha bibliografica, errata, folha de apróvação
+% Dedicatória, agradecimentos, epígrafe, resumos, listas
+% ---
+\input{beforetext/beforetext}
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ---
+% 1 - Introdução
+% ---
+\include{chapters/1-chapter}
+% ---
+
+% ---
+% 2 - Capítulo 2
+% ---
+\include{chapters/2-chapter}
+% ---
+
+% ---
+% 3 - Capítulo 3
+% ---
+\include{chapters/3-chapter}
+% ---
+
+% ---
+% 4 - Conclusão
+% ---
+%\phantompart
+\include{chapters/4-chapter}
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+%\postextual
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\begingroup
+  \SingleSpacing
+  \setlength\bibitemsep{\baselineskip}
+  \printbibliography[title=REFERÊNCIAS]
+\endgroup
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+  % \partapendices*
+  \input{aftertext/apendice_a}
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+  % \partanexos*
+  \input{aftertext/anexo_a}
+\end{anexosenv}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%---------------------------------------------------------------------
+%\phantompart
+%\printindex
+%---------------------------------------------------------------------
+
+\end{document}

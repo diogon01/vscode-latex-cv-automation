@@ -33,5 +33,14 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.message.warning.show": false,
-    "latex-workshop.chktex.enabled": false
+    "latex-workshop.chktex.enabled": false,
+    "latex-workshop.formatting.latex": "latexindent",
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    "latex-workshop.formatting.latexindent.args": [
+        "-g", // permite log para debug
+        "-l", // usa arquivo local .yaml se existir
+        "-m" // preserva quebras de linha
+    ]
 }
