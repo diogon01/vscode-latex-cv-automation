@@ -1,0 +1,45 @@
+##############################
+# LaTeX - arquivos auxiliares
+##############################
+*.aux
+*.log
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.ilg
+*.ind
+*.idx
+*.gls
+*.glo
+*.acr
+*.acn
+*.alg
+*.pdfsync
+*.tmp
+*.bak
+*~
+
+##############################
+# Diretórios de build
+##############################
+**/build/
+**/.vscode/build/
+
+##############################
+# PDFs gerados
+##############################
+*.pdf
+
+##############################
+# Editor e SO
+##############################
+Thumbs.db
+Desktop.ini
