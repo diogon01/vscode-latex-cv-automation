@@ -1,12 +1,4 @@
 {
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk (pdf)",
-            "tools": [
-                "latexmk"
-            ]
-        }
-    ],
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -18,29 +10,28 @@
                 "-pdf",
                 "%DOC%"
             ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk → biber → latexmk x2",
+            "tools": [
+                "latexmk",
+                "biber",
+                "latexmk",
+                "latexmk"
+            ]
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.ist",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.synctex.gz"
-    ]
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.chktex.enabled": false
 }
