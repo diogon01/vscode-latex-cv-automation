@@ -1,0 +1,89 @@
+% ==============================================================================
+% ESTILOS CUSTOMIZADOS E COMANDOS
+% ==============================================================================
+
+% Definição de cores
+\definecolor{primary}{RGB}{0, 102, 204}      % Azul profissional
+\definecolor{secondary}{RGB}{80, 80, 80}     % Cinza escuro
+\definecolor{accent}{RGB}{220, 220, 220}     % Cinza claro
+
+% Formatação de seções principais
+\titleformat{\section}
+  {\Large\bfseries\color{primary}}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+% Formatação de subseções
+\titleformat{\subsection}
+  {\large\bfseries\color{secondary}}
+  {}
+  {0em}
+  {}
+
+\titlespacing{\subsection}{0pt}{8pt}{4pt}
+
+% Comando para item de experiência
+% Uso: \experience{Cargo}{Empresa}{Período}{Descrição}
+\newcommand{\experience}[4]{
+  \subsection*{#1 \hfill {\normalfont\normalsize\color{secondary}#3}}
+  \textit{\color{secondary}#2}
+  \vspace{2pt}
+  
+  #4
+  \vspace{6pt}
+}
+
+% Comando para item de educação
+% Uso: \education{Curso}{Instituição}{Período}
+\newcommand{\education}[3]{
+  \subsection*{#1 \hfill {\normalfont\normalsize\color{secondary}#3}}
+  \textit{\color{secondary}#2}
+  \vspace{8pt}
+}
+
+% Comando para item de projeto
+% Uso: \project{Nome do Projeto}{Descrição}{Tecnologias}
+\newcommand{\project}[3]{
+  \subsection*{#1}
+  #2
+  
+  \textit{\color{secondary}Tecnologias: #3}
+  \vspace{8pt}
+}
+
+% Comando para skill com nível
+% Uso: \skill{Nome}{Nível de 1-5}
+\newcommand{\skill}[2]{
+  \textbf{#1} \hfill
+  \foreach \i in {1,...,5}{%
+    \ifnum\i<=#2
+      \textcolor{primary}{\faCircle}
+    \else
+      \textcolor{accent}{\faCircle}
+    \fi
+  }
+}
+
+% Comando para lista de skills simples
+% Uso: \skilllist{Skill1, Skill2, Skill3}
+\newcommand{\skilllist}[1]{
+  \begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \foreach \skill in {#1}{%
+      \item \skill
+    }
+  \end{itemize}
+}
+
+% Comando para informação de contato com ícone
+% Uso: \contactinfo{ícone}{texto}{link}
+\newcommand{\contactinfo}[3]{
+  \href{#3}{\textcolor{secondary}{#1 \, #2}}
+}
+
+% Ajustes de espaçamento
+\setlist[itemize]{leftmargin=*, nosep, itemsep=2pt, topsep=3pt}
+\setlength{\parskip}{3pt}

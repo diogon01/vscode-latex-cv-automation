@@ -1,0 +1,200 @@
+% ---
+% Capa
+% ---
+% https://tex.stackexchange.com/questions/386446/how-to-fix-destination-with-the-same-identifier-namepage-a-has-been-already
+% https://tex.stackexchange.com/questions/67989/pdftex-warning-has-been-referenced-but-does-not-exist-replaced-by-a-fixed-one
+\hypersetup{pageanchor=false}
+\PRIVATEbookmarkthis{Capa}
+\imprimircapa
+\hypersetup{pageanchor=true}
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+% http://ficha.bu.ufsc.br/
+\begin{fichacatalografica}
+    \includepdf{pictures/Ficha_Catalografica.pdf}
+\end{fichacatalografica}
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+\begin{folhadeaprovacao}
+    \OnehalfSpacing
+    \centering
+    \imprimirautor\\%
+    \vspace*{10pt}
+    \textbf{\imprimirtitulo}%
+    \ifnotempty{\imprimirsubtitulo}{:~\imprimirsubtitulo}\\%
+    %       \vspace*{31.5pt}%3\baselineskip
+    \vspace*{\baselineskip}
+    %\begin{minipage}{\textwidth}
+    O presente trabalho em nível de \imprimirnivel~foi avaliado e aprovado por banca examinadora composta pelos seguintes membros:\\
+    %\end{minipage}%
+    \vspace*{\baselineskip}
+    Prof.(a) xxxx, Dr(a).\\
+    Universidade xxxx\\
+    \vspace*{\baselineskip}
+    Prof.(a) xxxx, Dr(a).\\
+    Universidade xxxx\\
+    \vspace*{\baselineskip}
+    Prof.(a) xxxx, Dr(a).\\
+    Universidade xxxx\\
+    \vspace*{2\baselineskip}
+    \begin{minipage}{\textwidth}
+        Certificamos que esta é a \textbf{versão original e final} do trabalho de conclusão que foi julgado adequado para obtenção do título de \imprimirformacao.\\
+    \end{minipage}
+    %    \vspace{-0.7cm}
+    \vspace*{\fill}
+    \assinatura{\OnehalfSpacing\imprimircoordenador \\ \imprimircoordenadorRotulo~do Programa}
+    \vspace*{\fill}
+    \assinatura{\OnehalfSpacing\imprimirorientador \\ \imprimirorientadorRotulo}
+    %   \ifnotempty{\imprimircoorientador}{
+    %   \assinatura{\imprimircoorientador \\ \imprimircoorientadorRotulo \\
+    %       \imprimirinstituicao~--~\imprimirinstituicaosigla}
+    %   }
+    % \newpage
+    \vspace*{\fill}
+    \imprimirlocal, \imprimirdata.
+\end{folhadeaprovacao}
+% ---
+
+% ---
+% Dedicatória
+% ---
+\begin{dedicatoria}
+    \vspace*{\fill}
+    \noindent
+    \begin{adjustwidth*}{}{5.5cm}
+        À minha filha, \textbf{Betina Vitória}: tua luz abriu novos caminhos e me apresentou novos desafios. Foste o motivo central da escolha deste tema. Um presente divino na minha vida, que me transforma, a cada dia, em um homem melhor.
+    \end{adjustwidth*}
+\end{dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+    Inserir os agradecimentos aos colaboradores à execução do trabalho.
+
+    Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+\end{agradecimentos}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+    \begin{flushright}
+        \textit{``Texto da Epígrafe.\\
+            Citação relativa ao tema do trabalho.\\
+            É opcional. A epígrafe pode também aparecer\\
+            na abertura de cada seção ou capítulo.\\
+            Deve ser elaborada de acordo com a NBR 10520.''\\
+            (Autor da epígrafe, ano)}
+    \end{flushright}
+\end{epigrafe}
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+    \SingleSpacing
+    Este trabalho examina como o \emph{machismo estrutural} conforma conflitos de papéis vividos por pais que atuam no mercado de Tecnologia da Informação (TI), posicionando-os entre as expectativas do “profissional ideal” — disponibilidade total e desempenho contínuo — e o exercício da \emph{paternidade ativa}. Adota-se uma abordagem qualitativa triangulada: (i) revisão bibliográfica sobre conflito trabalho--família, masculinidades e paternidade; (ii) diagnóstico documental de políticas públicas e normativas organizacionais relacionadas à parentalidade no trabalho; e (iii) estudo de caso exploratório de interações em rede profissional digital (LinkedIn), com análise de conteúdo dos comentários e leitura de métricas de engajamento de uma publicação autoral (aprox.\ 40 mil impressões, 380 reações e 35 comentários). Os resultados indicam a invisibilização sistemática das dificuldades enfrentadas por pais, a naturalização do papel de provedor em detrimento do cuidado, e a prevalência de ambientes laborais que penalizam simbolicamente a dedicação à família. Argumenta-se que o conflito não é meramente individual, mas efeito de arranjos de trabalho e de gênero. Como contribuição prática, propõe-se uma agenda que inclui o reforço e a ampliação de licenças parentais e políticas de cuidado voltadas a pais, a flexibilização temporal e espacial do trabalho e a criação de culturas organizacionais não punitivas à parentalidade masculina.
+    
+    \vspace{\onelineskip}
+    \textbf{Palavras-chave}: paternidade ativa. conflito trabalho--família. machismo estrutural. tecnologia da informação. masculinidades.
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+    \SingleSpacing
+    \begin{otherlanguage*}{english}
+        This study examines how \emph{structural sexism} shapes role conflicts experienced by fathers working in the Information Technology (IT) sector, placing them between the expectations of the “ideal worker” --- continuous availability and performance --- and the exercise of \emph{active fatherhood}. A qualitative, triangulated approach was adopted: (i) literature review on work--family conflict, masculinities and fatherhood; (ii) documentary diagnosis of public policies and organizational norms related to parenthood at work; and (iii) an exploratory case study of interactions on a professional social network (LinkedIn), including content analysis of comments and engagement metrics from an author's post (approx.\ 40k impressions, 380 reactions, and 35 comments). Findings indicate the systematic invisibilization of fathers' difficulties, the naturalization of the provider role over care, and the prevalence of work environments that symbolically penalize family involvement. The paper argues that this conflict is not merely individual, but an effect of labor and gender arrangements. As a practical contribution, it advances an agenda that includes strengthening and expanding parental leave and father-focused care policies, temporal and spatial flexibility at work, and organizational cultures that do not penalize men's parenthood.
+
+        \vspace{\onelineskip}
+        \textbf{Keywords}: active fatherhood. work--family conflict. structural sexism. information technology. masculinities.
+    \end{otherlanguage*}
+\end{resumo}
+
+
+%% resumo em francês
+%\begin{resumo}[Résumé]
+% \begin{otherlanguage*}{french}
+%    Il s'agit d'un résumé en français.
+%
+%   \textbf{Mots-clés}: latex. abntex. publication de textes.
+% \end{otherlanguage*}
+%\end{resumo}
+%
+%% resumo em espanhol
+%\begin{resumo}[Resumen]
+% \begin{otherlanguage*}{spanish}
+%   Este es el resumen en español.
+%
+%   \textbf{Palabras clave}: latex. abntex. publicación de textos.
+% \end{otherlanguage*}
+%\end{resumo}
+%% ---
+
+{%hidelinks
+    \hypersetup{hidelinks}
+    % ---
+    % inserir lista de ilustrações
+    % ---
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures*
+    \cleardoublepage
+    % ---
+
+    % ---
+    % inserir lista de quadros
+    % ---
+    \pdfbookmark[0]{\listofquadrosname}{loq}
+    \listofquadros*
+    \cleardoublepage
+    % ---
+
+    % ---
+    % inserir lista de tabelas
+    % ---
+    \pdfbookmark[0]{\listtablename}{lot}
+    \listoftables*
+    \cleardoublepage
+    % ---
+
+    % ---
+    % inserir lista de abreviaturas e siglas (devem ser declarados no preambulo)
+    % ---
+    \imprimirlistadesiglas
+    % ---
+
+    % ---
+    % inserir lista de símbolos (devem ser declarados no preambulo)
+    % ---
+    \imprimirlistadesimbolos
+    % ---
+
+    % ---
+    % inserir o sumario
+    % ---
+    % \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents
+    \cleardoublepage
+
+}%hidelinks
+% ---

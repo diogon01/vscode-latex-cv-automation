@@ -17,7 +17,6 @@
 % \PassOptionsToPackage{brazil,main=english,spanish,french}{babel}
 \PassOptionsToPackage{notocbasic}{nomencl}   
 \PassOptionsToPackage{main=brazil,english,spanish,french}{babel}
-\PassOptionsToPackage{table}{xcolor}
 
 \documentclass[
 % -- opções da classe memoir --
@@ -129,9 +128,9 @@ brazilian, % https://tex.stackexchange.com/questions/516058/why-isnt-my-biblatex
 % Ano de entrega do trabalho
 \ano{2025}
 % Data da entrega/entrega final (preencher depois com o dia certo)
-\data{07 de Dezembro de 2025}
+\data{[dia] de [mês] de 2025}
 % Cidade em que o trabalho é apresentado (preencher conforme teu campus)
-\local{[Florianópolis]}
+\local{[Cidade]}
 
 \instituicaosigla{UFSC}
 \instituicao{Universidade Federal de Santa Catarina}
@@ -287,6 +286,32 @@ brazilian, % https://tex.stackexchange.com/questions/516058/why-isnt-my-biblatex
 % Consulte o manual da classe abntex2 para orientações sobre o glossário.
 %
 %\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+  % \partapendices*
+  \input{aftertext/apendice_a}
+\end{apendicesenv}
+% ---
+
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+
+% ---
+% Inicia os anexos
+% ---
+\begin{anexosenv}
+  % \partanexos*
+  \input{aftertext/anexo_a}
+\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO

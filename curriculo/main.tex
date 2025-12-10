@@ -1,0 +1,99 @@
+% ==============================================================================
+% CURRÍCULO - ESTRUTURA MODULAR
+% ==============================================================================
+% Autor: Seu Nome
+% Última atualização: \today
+% Compilar com: pdflatex main.tex
+% Para ícones funcionarem corretamente, compile com: xelatex ou lualatex
+% ==============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% Importar pacotes e configurações
+\input{config/packages.tex}
+
+% Importar estilos customizados
+\input{config/styles.tex}
+
+% ==============================================================================
+% INÍCIO DO DOCUMENTO
+% ==============================================================================
+
+\begin{document}
+
+% Cabeçalho com informações pessoais
+\input{sections/header.tex}
+
+% Resumo profissional
+\input{sections/summary.tex}
+
+% Experiência profissional
+\input{sections/experience.tex}
+
+% Formação acadêmica
+\input{sections/education.tex}
+
+% Habilidades técnicas
+\input{sections/skills.tex}
+
+% Projetos relevantes (opcional - comente se não for usar)
+\input{sections/projects.tex}
+
+% ==============================================================================
+% SEÇÕES OPCIONAIS
+% ==============================================================================
+
+% Descomente as seções abaixo se desejar incluí-las:
+
+% Idiomas
+% \section{Idiomas}
+% \begin{itemize}
+%   \item \textbf{Português:} Nativo
+%   \item \textbf{Inglês:} Fluente (TOEFL XXX / IELTS X.X)
+%   \item \textbf{Espanhol:} Intermediário
+% \end{itemize}
+
+% Publicações (para área acadêmica)
+% Prêmios e reconhecimentos
+% \section{Prêmios \& Reconhecimentos}
+% \begin{itemize}
+%   \item Nome do Prêmio - Instituição (Ano)
+%   \item Outro Reconhecimento - Contexto (Ano)
+% \end{itemize}
+
+% ==============================================================================
+% RODAPÉ (opcional)
+% ==============================================================================
+
+\vfill
+\begin{center}
+  \small\color{secondary}
+  Última atualização: \today
+\end{center}
+
+\end{document}
+
+% ==============================================================================
+% INSTRUÇÕES DE USO
+% ==============================================================================
+% 
+% 1. PERSONALIZAÇÃO:
+%    - Edite sections/header.tex com suas informações de contato
+%    - Preencha cada seção em sections/ com seu conteúdo
+%
+% 2. COMPILAÇÃO:
+%    - Método 1 (sem ícones): pdflatex main.tex
+%    - Método 2 (com ícones): xelatex main.tex ou lualatex main.tex
+%
+% 3. CUSTOMIZAÇÃO DE CORES:
+%    - Edite as cores em config/styles.tex
+%
+% 4. ADICIONAR/REMOVER SEÇÕES:
+%    - Comente/descomente linhas \input{} acima
+%    - Ou comente/descomente seções opcionais
+%
+% 5. AJUSTAR LAYOUT:
+%    - Margens: modifique geometry em config/packages.tex
+%    - Espaçamentos: ajuste em config/styles.tex
+%
+% ==============================================================================
