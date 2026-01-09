@@ -1,0 +1,220 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "LaTeX: Compile CV (Portuguese)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "Compila o currículo em português (PT-BR)"
+    },
+    {
+      "label": "LaTeX: Compile CV (English)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_en"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "Compiles the resume in English (EN-US)"
+    },
+    {
+      "label": "LaTeX: Compile Both CVs",
+      "dependsOn": [
+        "LaTeX: Compile CV (Portuguese)",
+        "LaTeX: Compile CV (English)"
+      ],
+      "dependsOrder": "parallel",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "Compila ambos os currículos (PT-BR e EN-US)"
+    },
+    {
+      "label": "LaTeX: Organize Build Files (Portuguese CV)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Rename-Item -Path main.pdf -NewName CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf -Force -ErrorAction SilentlyContinue; Move-Item -Path *.aux,*.log,*.out,*.fls,*.fdb_latexmk -Destination build -Force -ErrorAction SilentlyContinue"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "detail": "Renomeia o PDF e move arquivos auxiliares para a pasta build"
+    },
+    {
+      "label": "LaTeX: Organize Build Files (English CV)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Rename-Item -Path main.pdf -NewName RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf -Force -ErrorAction SilentlyContinue; Move-Item -Path *.aux,*.log,*.out,*.fls,*.fdb_latexmk -Destination build -Force -ErrorAction SilentlyContinue"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_en"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "detail": "Renames the PDF and moves auxiliary files to build folder"
+    },
+    {
+      "label": "LaTeX: Build & Organize CV (Portuguese)",
+      "dependsOn": [
+        "LaTeX: Compile CV (Portuguese)",
+        "LaTeX: Organize Build Files (Portuguese CV)"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "Compila e organiza o currículo em português"
+    },
+    {
+      "label": "LaTeX: Build & Organize CV (English)",
+      "dependsOn": [
+        "LaTeX: Compile CV (English)",
+        "LaTeX: Organize Build Files (English CV)"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "Compiles and organizes the resume in English"
+    },
+    {
+      "label": "LaTeX: Build & Organize All CVs",
+      "dependsOn": [
+        "LaTeX: Build & Organize CV (Portuguese)",
+        "LaTeX: Build & Organize CV (English)"
+      ],
+      "dependsOrder": "parallel",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "🚀 Compila e organiza todos os currículos (PT-BR e EN-US)"
+    },
+    {
+      "label": "LaTeX: Clean Build Artifacts",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Remove-Item -Path curriculo/build/*,curriculo_en/build/* -Force -ErrorAction SilentlyContinue; Write-Host 'Build artifacts cleaned successfully!' -ForegroundColor Green"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "detail": "Limpa todos os arquivos de build (.aux, .log, etc.)"
+    },
+    {
+      "label": "LaTeX: Clean All (Including PDFs)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Remove-Item -Path curriculo/*.pdf,curriculo/*.aux,curriculo/*.log,curriculo/*.out,curriculo/*.fls,curriculo/*.fdb_latexmk,curriculo/build/*,curriculo_en/*.pdf,curriculo_en/*.aux,curriculo_en/*.log,curriculo_en/*.out,curriculo_en/*.fls,curriculo_en/*.fdb_latexmk,curriculo_en/build/* -Force -ErrorAction SilentlyContinue; Write-Host 'All build files and PDFs cleaned!' -ForegroundColor Yellow"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "detail": "⚠️ Remove TODOS os arquivos gerados (incluindo PDFs)"
+    }
+  ]
+}

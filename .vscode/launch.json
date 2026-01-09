@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🇧🇷 Compilar CV Português",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Build & Organize CV (Portuguese)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX",
+        "order": 1
+      }
+    },
+    {
+      "name": "🇺🇸 Compile CV English",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Build & Organize CV (English)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX",
+        "order": 2
+      }
+    },
+    {
+      "name": "🌎 Compilar Ambos os CVs / Compile Both CVs",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Build & Organize All CVs",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX",
+        "order": 3
+      }
+    }
+  ]
+}
