@@ -1,0 +1,10 @@
+# Configuração de compilação LaTeX
+# Diretório de saída para arquivos auxiliares
+$aux_dir = 'build';
+$out_dir = '.';
+
+# Nome do PDF de saída
+$jobname = 'CURRICULO-DIOGO-HENRIQUE-TECH-LEAD';
+
+# Garantir que o diretório build existe
+system('if not exist build mkdir build');

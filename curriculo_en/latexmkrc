@@ -1,0 +1,10 @@
+# LaTeX build configuration
+# Output directory for auxiliary files
+$aux_dir = 'build';
+$out_dir = '.';
+
+# PDF output name
+$jobname = 'RESUME-DIOGO-HENRIQUE-TECH-LEAD';
+
+# Ensure build directory exists
+system('if not exist build mkdir build');
