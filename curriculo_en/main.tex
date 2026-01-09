@@ -1,0 +1,101 @@
+% ==============================================================================
+% RESUME - MODULAR STRUCTURE
+% ==============================================================================
+% Author: Diogo Henrique Fragoso de Oliveira
+% Last update: \today
+% Compile with: pdflatex main.tex
+% For icons to work properly, compile with: xelatex or lualatex
+% ==============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% Import packages and configurations
+\input{config/packages.tex}
+
+% Import custom styles
+\input{config/styles.tex}
+
+% ==============================================================================
+% DOCUMENT START
+% ==============================================================================
+
+\begin{document}
+
+% Header with personal information
+\input{sections/header.tex}
+
+% Professional summary
+\input{sections/summary.tex}
+
+% Professional experience
+\input{sections/experience.tex}
+
+\clearpage
+
+% Education
+\input{sections/education.tex}
+
+% Technical skills
+\input{sections/skills.tex}
+
+% Relevant projects (optional - comment if not using)
+\input{sections/projects.tex}
+
+% ==============================================================================
+% OPTIONAL SECTIONS
+% ==============================================================================
+
+% Uncomment the sections below if you wish to include them:
+
+% Languages
+% \section{Languages}
+% \begin{itemize}
+%   \item \textbf{Portuguese:} Native
+%   \item \textbf{English:} Fluent (TOEFL XXX / IELTS X.X)
+%   \item \textbf{Spanish:} Intermediate
+% \end{itemize}
+
+% Publications (for academic area)
+% Awards and recognitions
+% \section{Awards \& Recognition}
+% \begin{itemize}
+%   \item Award Name - Institution (Year)
+%   \item Other Recognition - Context (Year)
+% \end{itemize}
+
+% ==============================================================================
+% FOOTER (optional)
+% ==============================================================================
+
+\vfill
+\begin{center}
+  \small\color{secondary}
+  Last updated: \today
+\end{center}
+
+\end{document}
+
+% ==============================================================================
+% USAGE INSTRUCTIONS
+% ==============================================================================
+% 
+% 1. CUSTOMIZATION:
+%    - Edit sections/header.tex with your contact information
+%    - Fill each section in sections/ with your content
+%
+% 2. COMPILATION:
+%    - Method 1 (without icons): pdflatex main.tex
+%    - Method 2 (with icons): xelatex main.tex or lualatex main.tex
+%
+% 3. COLOR CUSTOMIZATION:
+%    - Edit colors in config/styles.tex
+%
+% 4. ADD/REMOVE SECTIONS:
+%    - Comment/uncomment \input{} lines above
+%    - Or comment/uncomment optional sections
+%
+% 5. ADJUST LAYOUT:
+%    - Margins: modify geometry in config/packages.tex
+%    - Spacing: adjust in config/styles.tex
+%
+% ==============================================================================
