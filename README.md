@@ -1,10 +1,61 @@
-# 📄 LaTeX Articles & CV Repository
+<div align="center">
 
-[🇧🇷 Português](#português) | [🇺🇸 English](#english)
+# 📄 LaTeX CV Automation
+
+### Professional Resume Builder with VS Code Integration
+
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)](https://www.latex-project.org/)
+[![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
 ---
 
+### 🎯 View My Professional Resume
+
+<table>
+<tr>
+<td align="center" width="50%">
+<h3>🇧🇷 Português</h3>
+<a href="curriculo/CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf">
+<img src="https://img.shields.io/badge/Download-CV%20Portugu%C3%AAs-0066cc?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV Português"/>
+</a>
+<br/><br/>
+<sub><b>Tech Lead | Arquiteto de Software</b></sub><br/>
+<sub>8+ anos de experiência em Node.js/NestJS</sub>
+</td>
+<td align="center" width="50%">
+<h3>🇺🇸 English</h3>
+<a href="curriculo_en/RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf">
+<img src="https://img.shields.io/badge/Download-English%20Resume-cc0000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download English Resume"/>
+</a>
+<br/><br/>
+<sub><b>Tech Lead | Software Architect</b></sub><br/>
+<sub>8+ years of experience in Node.js/NestJS</sub>
+</td>
+</tr>
+</table>
+
+---
+
+</div>
+
 ## 🇧🇷 Português
+
+### 🌟 Destaques do Repositório
+
+```
+✨ Compilação com 1 clique (F5)  |  🎨 Design profissional moderno
+📝 Templates modulares           |  🔧 10 tasks automatizadas
+🌍 Bilíngue (PT-BR/EN-US)        |  📚 Documentação completa
+```
+
+### 📊 Estatísticas
+
+![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-2000%2B-blue)
+![Files](https://img.shields.io/badge/Files-25%2B-green)
+![Build](https://img.shields.io/badge/Build-Passing-success)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
 
 ### 📋 Sobre
 
@@ -178,6 +229,21 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 🇺🇸 English
 
+### 🌟 Repository Highlights
+
+```
+✨ 1-click compilation (F5)      |  🎨 Modern professional design
+📝 Modular templates             |  🔧 10 automated tasks
+🌍 Bilingual (PT-BR/EN-US)       |  📚 Complete documentation
+```
+
+### 📊 Statistics
+
+![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-2000%2B-blue)
+![Files](https://img.shields.io/badge/Files-25%2B-green)
+![Build](https://img.shields.io/badge/Build-Passing-success)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
+
 ### 📋 About
 
 Repository for compiling scientific articles and resumes in LaTeX using VS Code. Supports automated compilation in Portuguese (PT-BR) and English (EN-US) with modular and organized structure.
@@ -306,8 +372,31 @@ This project is under the MIT License. See the [LICENSE](LICENSE) file for more 
 
 <div align="center">
 
+## 👨‍💻 About the Author
+
+**Diogo Henrique Fragoso de Oliveira**  
+Tech Lead | Software Architect | Azure & DevOps Specialist
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/diogonoliveira)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/diogon01)
+[![Website](https://img.shields.io/badge/Website-Visit-00ADD8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://42robotics.com.br/pesquisas)
+
+### 📥 Download My Resume
+
+<a href="curriculo/CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf">
+<img src="https://img.shields.io/badge/🇧🇷_Português-Download-0066cc?style=for-the-badge" alt="Download CV Português"/>
+</a>
+&nbsp;&nbsp;
+<a href="curriculo_en/RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf">
+<img src="https://img.shields.io/badge/🇺🇸_English-Download-cc0000?style=for-the-badge" alt="Download English Resume"/>
+</a>
+
+---
+
+### ⭐ If this repository helped you, please star it!
+
 **Made with ❤️ using LaTeX and VS Code**
 
-[⬆ Back to top](#-latex-articles--cv-repository)
+[⬆ Back to top](#-latex-cv-automation)
 
 </div>

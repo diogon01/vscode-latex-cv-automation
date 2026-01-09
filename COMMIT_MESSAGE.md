@@ -1,138 +1,147 @@
-feat: Add VS Code launch configurations and comprehensive repository setup
+feat: Initial commit - Professional LaTeX CV automation with VS Code integration
 
-## 🎯 Overview
-Complete GitHub repository setup with automated LaTeX compilation, VS Code integration, and comprehensive bilingual documentation.
+🎯 Complete repository setup for automated LaTeX CV compilation
 
-## ✨ New Features
+## ✨ Features
 
-### VS Code Configuration
-- **Launch Configurations** (`.vscode/launch.json`)
-  - 🇧🇷 Compilar CV Português - Quick compile Portuguese CV with F5
-  - 🇺🇸 Compile CV English - Quick compile English CV with F5
-  - 🌎 Compilar Ambos os CVs - Compile both CVs in parallel
-  
-- **Intelligent Build Tasks** (`.vscode/tasks.json`)
-  - 10 automated tasks for LaTeX compilation
-  - Parallel compilation support
-  - Automatic PDF renaming and build file organization
+### VS Code Integration
+- 🎮 3 Launch Configurations with emoji flags (🇧🇷 🇺🇸 🌎)
+  - F5 quick compilation for Portuguese CV
+  - F5 quick compilation for English CV  
+  - F5 parallel compilation for both CVs
+- 🔧 10 Intelligent Build Tasks
+  - Automated compilation with pdflatex
+  - Automatic PDF renaming with professional names
+  - Build artifact organization (*.aux, *.log → build/)
   - Clean and rebuild options
-
-- **LaTeX Workshop Settings** (`.vscode/settings.json`)
+- ⚙️ LaTeX Workshop Configuration
   - Multiple compiler support (pdflatex, xelatex, lualatex)
   - Auto-clean build artifacts
-  - Optimized search exclusions
-  - File associations
+  - Optimized file associations and exclusions
+- 📦 Recommended Extensions
+  - LaTeX Workshop, LTeX, LaTeX Utilities
 
-- **Recommended Extensions** (`.vscode/extensions.json`)
-  - LaTeX Workshop
-  - LTeX (grammar checking)
-  - LaTeX Utilities
-  - LaTeX Support
+### Professional CVs
+- 📄 Bilingual Templates (PT-BR/EN-US)
+  - CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf (Portuguese)
+  - RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf (English)
+- 🎨 Modern Professional Design
+  - Clean architecture with modular sections
+  - Customizable colors and styles
+  - FontAwesome icons support
+  - Professional typography (Libertine font)
+- 💼 Tech Lead Profile
+  - 8+ years of experience in Node.js/NestJS
+  - Azure DevOps & CI/CD expertise
+  - Microservices architecture specialist
+  - Computer vision & 3D photogrammetry background
 
 ### Documentation
-
-- **README.md** - Bilingual documentation (PT-BR/EN-US)
+- 📚 Comprehensive Bilingual README
   - Quick start guide
+  - Visual badges and statistics
+  - Direct CV download links
   - Project structure overview
-  - Tasks and launch configurations table
-  - Customization instructions
-  - Manual compilation guide
-
-- **DOCUMENTATION.md** - Comprehensive technical guide
-  - Detailed workflow explanation
+  - Tasks and launch configurations reference
+- 📖 Detailed Technical Documentation
+  - Complete workflow explanation
   - VS Code tasks deep dive
   - Launch configurations tutorial
-  - LaTeX file structure anatomy
   - Advanced customization guide
-  - Troubleshooting section with solutions
+  - Troubleshooting with solutions
   - Tips, tricks, and keyboard shortcuts
   - FAQ with practical examples
-
-- **SETUP-SUMMARY.md** - Quick reference
-  - Setup checklist
-  - Next steps for local use and GitHub publication
+- 📝 Additional Guides
+  - Setup summary and checklist
+  - Repository naming recommendations
+  - Launch configurations test report
+  - Commit message template
 
 ### Repository Configuration
-
-- **.gitignore** - Comprehensive LaTeX patterns
-  - 90+ file extensions covered
+- 🔒 Comprehensive .gitignore
+  - 90+ LaTeX file patterns
   - VS Code settings preservation
   - Build directory exclusions
-  - Optional PDF ignoring
+- ⚖️ MIT License
+- 🎯 Professional README with badges
+  - LaTeX, VS Code, MIT License, PRs Welcome
+  - Repository statistics (2000+ lines, 25+ files)
+  - Author section with social links
+  - Multiple CV download points
 
-- **LICENSE** - MIT License
+## 📊 Project Structure
 
-### CV Updates
-
-- Updated experience from 5+ to **8+ years** in both versions
-- Professional PDF naming:
-  - `CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf` (Portuguese)
-  - `RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf` (English)
-- Build files organized in dedicated `build/` folders
-
-## 📊 Files Changed
-
-### Created
-- `.vscode/launch.json` (3 emoji-flagged configurations)
-- `.vscode/tasks.json` (10 intelligent build tasks)
-- `.vscode/settings.json` (LaTeX Workshop configuration)
-- `.vscode/extensions.json` (recommended extensions)
-- `README.md` (bilingual documentation)
-- `DOCUMENTATION.md` (technical guide)
-- `SETUP-SUMMARY.md` (quick reference)
-- `LICENSE` (MIT)
-
-### Modified
-- `.gitignore` (enhanced with LaTeX patterns + VS Code preservation)
-- `curriculo/sections/summary.tex` (8+ years experience)
-- `curriculo_en/sections/summary.tex` (8+ years experience)
-
-## 🚀 Usage
-
-### Quick Compile
-```bash
-# Press F5 in VS Code and select:
-🇧🇷 Compilar CV Português
-🇺🇸 Compile CV English
-🌎 Compilar Ambos os CVs
+```
+vscode-latex-cv-automation/
+├── .vscode/
+│   ├── launch.json          # 3 emoji-flagged configurations
+│   ├── tasks.json           # 10 intelligent build tasks
+│   ├── settings.json        # LaTeX Workshop config
+│   └── extensions.json      # Recommended extensions
+├── curriculo/               # Portuguese CV
+│   ├── CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf
+│   ├── main.tex
+│   ├── build/              # Build artifacts
+│   ├── config/             # LaTeX packages & styles
+│   └── sections/           # Modular CV sections
+├── curriculo_en/           # English CV
+│   ├── RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf
+│   ├── main.tex
+│   ├── build/
+│   ├── config/
+│   └── sections/
+├── .gitignore
+├── LICENSE
+├── README.md               # Bilingual documentation
+├── DOCUMENTATION.md        # Technical guide
+└── [Additional docs]
 ```
 
-### Via Tasks
-```bash
-# Ctrl+Shift+P → Tasks: Run Task
-LaTeX: Build & Organize All CVs
-```
+## 🚀 Quick Start
 
-### Manual
-```bash
-cd curriculo && pdflatex main.tex
-cd curriculo_en && pdflatex main.tex
-```
-
-## 📝 Documentation
-
-- Quick start: See [README.md](README.md)
-- Technical guide: See [DOCUMENTATION.md](DOCUMENTATION.md)
-- Setup summary: See [SETUP-SUMMARY.md](SETUP-SUMMARY.md)
+1. Clone repository
+2. Open in VS Code
+3. Install recommended extensions
+4. Press **F5** and select desired configuration
+5. ✨ PDF compiled and organized!
 
 ## 🎨 Highlights
 
-- **Emoji flags** for intuitive language identification
-- **Bilingual documentation** (PT-BR/EN-US)
-- **10 automated tasks** for complete workflow control
-- **3 launch configurations** for one-click compilation
-- **Comprehensive troubleshooting** guide
+- **One-click compilation** with F5
+- **Automated build organization** (clean workspace)
 - **Professional PDF naming** convention
-- **Clean repository structure** with organized build files
+- **Bilingual support** (PT-BR/EN-US)
+- **Modular architecture** for easy customization
+- **Complete documentation** in both languages
+- **Production-ready** LaTeX templates
 
-## 🔧 Technical Details
+## 📝 Tech Stack
 
-- LaTeX compilation with pdflatex
-- Automatic build artifact organization
-- VS Code integration with LaTeX Workshop
-- Git-friendly with proper .gitignore
-- Cross-platform support (Windows, macOS, Linux)
+- LaTeX (pdflatex)
+- VS Code + LaTeX Workshop
+- FontAwesome5 icons
+- Libertine fonts
+- Git version control
+
+## 🎯 Use Cases
+
+- ✅ Professional CV/Resume creation
+- ✅ Automated LaTeX compilation workflow
+- ✅ VS Code LaTeX development
+- ✅ Bilingual document templates
+- ✅ CI/CD documentation examples
+
+## 👨‍💻 Author
+
+**Diogo Henrique Fragoso de Oliveira**  
+Tech Lead | Software Architect | Azure & DevOps Specialist
+
+- LinkedIn: [linkedin.com/in/diogonoliveira](https://linkedin.com/in/diogonoliveira)
+- GitHub: [github.com/diogon01](https://github.com/diogon01)
+- Website: [42robotics.com.br/pesquisas](https://42robotics.com.br/pesquisas)
 
 ---
 
-**Ready for GitHub publication** ✅
+**Ready for production use** ✅  
+**Fully documented** 📚  
+**Tested and validated** 🧪
