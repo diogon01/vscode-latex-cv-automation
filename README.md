@@ -18,20 +18,34 @@
 <td align="center" width="50%">
 <h3>🇧🇷 Português</h3>
 <a href="curriculo/CURRICULO-DIOGO-HENRIQUE-TECH-LEAD.pdf">
-<img src="https://img.shields.io/badge/Download-CV%20Portugu%C3%AAs-0066cc?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV Português"/>
+<img src="https://img.shields.io/badge/Download-CV%20Tech%20Lead-0066cc?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV Tech Lead"/>
 </a>
 <br/><br/>
 <sub><b>Tech Lead | Arquiteto de Software</b></sub><br/>
 <sub>8+ anos de experiência em Node.js/NestJS</sub>
+<br/><br/>
+<a href="curriculo_angular/CURRICULO-DIOGO-HENRIQUE-ANGULAR-FULLSTACK.pdf">
+<img src="https://img.shields.io/badge/Download-CV%20Angular%20Full%20Stack-00ADD8?style=for-the-badge&logo=angular&logoColor=white" alt="Download CV Angular"/>
+</a>
+<br/><br/>
+<sub><b>Desenvolvedor Full Stack Angular</b></sub><br/>
+<sub>Especialista Angular 1.x → 17+</sub>
 </td>
 <td align="center" width="50%">
 <h3>🇺🇸 English</h3>
 <a href="curriculo_en/RESUME-DIOGO-HENRIQUE-TECH-LEAD.pdf">
-<img src="https://img.shields.io/badge/Download-English%20Resume-cc0000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download English Resume"/>
+<img src="https://img.shields.io/badge/Download-Resume%20Tech%20Lead-cc0000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download Resume Tech Lead"/>
 </a>
 <br/><br/>
 <sub><b>Tech Lead | Software Architect</b></sub><br/>
 <sub>8+ years of experience in Node.js/NestJS</sub>
+<br/><br/>
+<a href="curriculo_angular_en/RESUME-DIOGO-HENRIQUE-ANGULAR-FULLSTACK.pdf">
+<img src="https://img.shields.io/badge/Download-Resume%20Angular%20Full%20Stack-00ADD8?style=for-the-badge&logo=angular&logoColor=white" alt="Download Resume Angular"/>
+</a>
+<br/><br/>
+<sub><b>Full Stack Angular Developer</b></sub><br/>
+<sub>Angular specialist 1.x → 17+</sub>
 </td>
 </tr>
 </table>

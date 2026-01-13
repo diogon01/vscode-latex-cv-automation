@@ -28,6 +28,32 @@
       "detail": "Compila o currículo em português (PT-BR)"
     },
     {
+      "label": "LaTeX: Compile CV Angular (Portuguese)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_angular"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "🅰️ Compila o currículo Angular em português (PT-BR)"
+    },
+    {
       "label": "LaTeX: Compile CV (English)",
       "type": "shell",
       "command": "pdflatex",
@@ -52,6 +78,32 @@
         "$latex"
       ],
       "detail": "Compiles the resume in English (EN-US)"
+    },
+    {
+      "label": "LaTeX: Compile CV Angular (English)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_angular_en"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "🅰️ Compiles the Angular resume in English (EN-US)"
     },
     {
       "label": "LaTeX: Compile Both CVs",

@@ -1,0 +1,10 @@
+# LaTeX compilation configuration
+# Output directory for auxiliary files
+$aux_dir = 'build';
+$out_dir = '.';
+
+# Output PDF name
+$jobname = 'RESUME-DIOGO-HENRIQUE-ANGULAR-FULLSTACK';
+
+# Ensure build directory exists
+system('if not exist build mkdir build');

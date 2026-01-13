@@ -42,6 +42,34 @@
         "group": "LaTeX",
         "order": 3
       }
+    },
+    {
+      "name": "🅰️🇧🇷 Compilar CV Angular Português",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Compile CV Angular (Portuguese)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Angular",
+        "order": 4
+      }
+    },
+    {
+      "name": "🅰️🇺🇸 Compile CV Angular English",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Compile CV Angular (English)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Angular",
+        "order": 5
+      }
     }
   ]
 }

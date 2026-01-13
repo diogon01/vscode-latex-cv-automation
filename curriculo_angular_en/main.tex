@@ -1,0 +1,54 @@
+% ==============================================================================
+% ANGULAR FULL STACK RESUME - MODULAR STRUCTURE
+% ==============================================================================
+% Author: Diogo Henrique Fragoso de Oliveira
+% Focus: Front-End Angular / Full Stack
+% Last update: \today
+% Compile with: pdflatex main.tex
+% For icons to work properly, compile with: xelatex or lualatex
+% ==============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% Import packages and configurations
+\input{config/packages.tex}
+
+% Import custom styles
+\input{config/styles.tex}
+
+% ==============================================================================
+% DOCUMENT START
+% ==============================================================================
+
+\begin{document}
+
+% Header with personal information
+\input{sections/header.tex}
+
+% Professional summary
+\input{sections/summary.tex}
+
+% Professional experience
+\input{sections/experience.tex}
+
+\vspace{15pt}
+
+% Education
+\input{sections/education.tex}
+
+\vspace{12pt}
+
+% Technical skills
+\input{sections/skills.tex}
+
+% ==============================================================================
+% FOOTER (optional)
+% ==============================================================================
+
+\vfill
+\begin{center}
+  \small\color{secondary}
+  Last updated: \today
+\end{center}
+
+\end{document}
