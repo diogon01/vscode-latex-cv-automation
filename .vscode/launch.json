@@ -70,6 +70,20 @@
         "group": "LaTeX Angular",
         "order": 5
       }
+    },
+    {
+      "name": "🅰️🌎 Compilar Ambos os CVs Angular / Compile Both Angular CVs",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Compile Both Angular CVs",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Angular",
+        "order": 6
+      }
     }
   ]
 }
