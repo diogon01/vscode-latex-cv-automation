@@ -243,6 +243,156 @@
       "detail": "🚀 Compila e organiza todos os currículos (PT-BR e EN-US)"
     },
     {
+      "label": "LaTeX: Compile CV Python/AI (Portuguese)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_python_ai"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "🐍 Compila o currículo Python/AI em português (PT-BR)"
+    },
+    {
+      "label": "LaTeX: Compile CV Python/AI (English)",
+      "type": "shell",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "main.tex"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_python_ai_en"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": [
+        "$latex"
+      ],
+      "detail": "🐍 Compiles the Python/AI resume in English (EN-US)"
+    },
+    {
+      "label": "LaTeX: Organize Build Files (Portuguese Python/AI CV)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Rename-Item -Path main.pdf -NewName CURRICULO-DIOGO-HENRIQUE-PYTHON-AI.pdf -Force -ErrorAction SilentlyContinue; Move-Item -Path *.aux,*.log,*.out,*.fls,*.fdb_latexmk -Destination build -Force -ErrorAction SilentlyContinue"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_python_ai"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "detail": "Renomeia o PDF e move arquivos auxiliares para a pasta build"
+    },
+    {
+      "label": "LaTeX: Organize Build Files (English Python/AI CV)",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "Rename-Item -Path main.pdf -NewName RESUME-DIOGO-HENRIQUE-PYTHON-AI.pdf -Force -ErrorAction SilentlyContinue; Move-Item -Path *.aux,*.log,*.out,*.fls,*.fdb_latexmk -Destination build -Force -ErrorAction SilentlyContinue"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/curriculo_python_ai_en"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+      },
+      "detail": "Renames the PDF and moves auxiliary files to build folder"
+    },
+    {
+      "label": "LaTeX: Build & Organize CV Python/AI (Portuguese)",
+      "dependsOn": [
+        "LaTeX: Compile CV Python/AI (Portuguese)",
+        "LaTeX: Organize Build Files (Portuguese Python/AI CV)"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "🐍 Compila e organiza o currículo Python/AI em português"
+    },
+    {
+      "label": "LaTeX: Build & Organize CV Python/AI (English)",
+      "dependsOn": [
+        "LaTeX: Compile CV Python/AI (English)",
+        "LaTeX: Organize Build Files (English Python/AI CV)"
+      ],
+      "dependsOrder": "sequence",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "🐍 Compiles and organizes the Python/AI resume in English"
+    },
+    {
+      "label": "LaTeX: Compile Both Python/AI CVs",
+      "dependsOn": [
+        "LaTeX: Compile CV Python/AI (Portuguese)",
+        "LaTeX: Compile CV Python/AI (English)"
+      ],
+      "dependsOrder": "parallel",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "detail": "🐍 Compila ambos os currículos Python/AI (PT-BR e EN-US)"
+    },
+    {
       "label": "LaTeX: Clean Build Artifacts",
       "type": "shell",
       "command": "powershell",

@@ -1,0 +1,54 @@
+% ==============================================================================
+% CURRÍCULO PYTHON/C++/IA - ESTRUTURA MODULAR
+% ==============================================================================
+% Autor: Diogo Henrique Fragoso de Oliveira
+% Foco: Engenheiro de Software Python/C++ | Especialista em IA
+% Última atualização: \today
+% Compilar com: pdflatex main.tex
+% Para ícones funcionarem corretamente, compile com: xelatex ou lualatex
+% ==============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% Importar pacotes e configurações
+\input{config/packages.tex}
+
+% Importar estilos customizados
+\input{config/styles.tex}
+
+% ==============================================================================
+% INÍCIO DO DOCUMENTO
+% ==============================================================================
+
+\begin{document}
+
+% Cabeçalho com informações pessoais
+\input{sections/header.tex}
+
+% Resumo profissional
+\input{sections/summary.tex}
+
+% Experiência profissional
+\input{sections/experience.tex}
+
+\newpage
+
+% Habilidades técnicas
+\input{sections/skills.tex}
+
+\vspace{10pt}
+
+% Publicações científicas
+\input{sections/publications.tex}
+
+% ==============================================================================
+% RODAPÉ (opcional)
+% ==============================================================================
+
+\vfill
+\begin{center}
+  \small\color{secondary}
+  Última atualização: \today
+\end{center}
+
+\end{document}

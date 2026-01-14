@@ -1,0 +1,90 @@
+% ==============================================================================
+% CUSTOM STYLES AND COMMANDS - PYTHON/AI THEME
+% ==============================================================================
+
+% Color definitions - Python/AI Theme
+\definecolor{primary}{RGB}{55, 118, 171}      % Python Blue
+\definecolor{secondary}{RGB}{50, 50, 50}      % Dark gray
+\definecolor{accent}{RGB}{255, 212, 59}       % Python Yellow (used sparingly)
+\definecolor{accentlight}{RGB}{220, 220, 220} % Light gray for dividers
+
+% Main section formatting
+\titleformat{\section}
+  {\Large\bfseries\color{primary}}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{12pt}{10pt}
+
+% Subsection formatting
+\titleformat{\subsection}
+  {\large\bfseries\color{secondary}}
+  {}
+  {0em}
+  {}
+
+\titlespacing{\subsection}{0pt}{10pt}{6pt}
+
+% Command for experience item
+% Usage: \experience{Position}{Company}{Period}{Description}
+\newcommand{\experience}[4]{
+  \subsection*{#1 \hfill {\normalfont\normalsize\color{secondary}#3}}
+  \textit{\color{secondary}#2}
+  \vspace{4pt}
+  
+  #4
+  \vspace{12pt}
+}
+
+% Command for education item
+% Usage: \education{Degree}{Institution}{Period}
+\newcommand{\education}[3]{
+  \subsection*{#1 \hfill {\normalfont\normalsize\color{secondary}#3}}
+  \textit{\color{secondary}#2}
+  \vspace{8pt}
+}
+
+% Command for project item
+% Usage: \project{Project Name}{Description}{Technologies}
+\newcommand{\project}[3]{
+  \subsection*{#1}
+  #2
+  
+  \textit{\color{secondary}Technologies: #3}
+  \vspace{8pt}
+}
+
+% Command for skill with level
+% Usage: \skill{Name}{Level from 1-5}
+\newcommand{\skill}[2]{
+  \textbf{#1} \hfill
+  \foreach \i in {1,...,5}{%
+    \ifnum\i<=#2
+      \textcolor{primary}{\faCircle}
+    \else
+      \textcolor{accentlight}{\faCircle}
+    \fi
+  }
+}
+
+% Command for simple skill list
+% Usage: \skilllist{Skill1, Skill2, Skill3}
+\newcommand{\skilllist}[1]{
+  \begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \foreach \skill in {#1}{%
+      \item \skill
+    }
+  \end{itemize}
+}
+
+% Command for contact info with icon
+% Usage: \contactinfo{icon}{text}{link}
+\newcommand{\contactinfo}[3]{
+  \href{#3}{\textcolor{secondary}{#1 \, #2}}
+}
+
+% Spacing adjustments
+\setlist[itemize]{leftmargin=*, nosep, itemsep=2pt, topsep=3pt}
+\setlength{\parskip}{3pt}

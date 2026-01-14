@@ -1,0 +1,54 @@
+% ==============================================================================
+% PYTHON/C++/AI RESUME - MODULAR STRUCTURE
+% ==============================================================================
+% Author: Diogo Henrique Fragoso de Oliveira
+% Focus: Software Engineer Python/C++ | AI Specialist
+% Last update: \today
+% Compile with: pdflatex main.tex
+% For icons to work correctly, compile with: xelatex or lualatex
+% ==============================================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% Import packages and configurations
+\input{config/packages.tex}
+
+% Import custom styles
+\input{config/styles.tex}
+
+% ==============================================================================
+% DOCUMENT START
+% ==============================================================================
+
+\begin{document}
+
+% Header with personal information
+\input{sections/header.tex}
+
+% Professional summary
+\input{sections/summary.tex}
+
+% Professional experience
+\input{sections/experience.tex}
+
+\newpage
+
+% Technical skills
+\input{sections/skills.tex}
+
+\vspace{10pt}
+
+% Scientific publications
+\input{sections/publications.tex}
+
+% ==============================================================================
+% FOOTER (optional)
+% ==============================================================================
+
+\vfill
+\begin{center}
+  \small\color{secondary}
+  Last updated: \today
+\end{center}
+
+\end{document}

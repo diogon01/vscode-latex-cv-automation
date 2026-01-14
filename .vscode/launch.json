@@ -84,6 +84,48 @@
         "group": "LaTeX Angular",
         "order": 6
       }
+    },
+    {
+      "name": "🐍🇧🇷 Compilar CV Python/AI Português",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Build & Organize CV Python/AI (Portuguese)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Python/AI",
+        "order": 7
+      }
+    },
+    {
+      "name": "🐍🇺🇸 Compile CV Python/AI English",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Build & Organize CV Python/AI (English)",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Python/AI",
+        "order": 8
+      }
+    },
+    {
+      "name": "🐍🌎 Compilar Ambos os CVs Python/AI / Compile Both Python/AI CVs",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "LaTeX: Compile Both Python/AI CVs",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "LaTeX Python/AI",
+        "order": 9
+      }
     }
   ]
 }
